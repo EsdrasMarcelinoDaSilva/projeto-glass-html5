@@ -6,10 +6,10 @@
    <meta charset="UTF-8"/>
   <script>
       var quebrada=false
-      function mudaLampada(tipo) {
+      function mudaLampada(estado) {
           if (!quebrada) {
-             document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
-             if (tipo == 'lampada-quebrada') {
+             document.getElementById("luz").src = "/_imagens/" + estado + ".jpg";
+             if (estado == 'lampada-quebrada') {
                  quebrada = true;
              }
           }
@@ -18,6 +18,6 @@
 </head>
 <body>
     <h1>Acenda a Lampada</h1>
-    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
+    <img src="/_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
 </body>
 </html>
